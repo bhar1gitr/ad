@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Edit User</title>
+  <link rel="stylesheet" href="/edit.css">
+  <link rel="shortcut icon" href="/public/images/ux.png" type="image/x-icon">
+
+</head>
+<body>
+  <h1>Edit money of <span><%= user.name %></span></h1>
+  <div class="outer">
+    <form method="POST" action="/admin/<%= user._id %>">
+      <div class="form__group field">
+        <label for="name" class="form__label"><span>Money : </span></label>
+        <input type="input" class="form__field" placeholder="Enter the money" name="money" value="<%= user.money %>" id='name' required />
+      </div>
+    	<button type="submit" class="btn"><span>Change</span></button>
+    </form>
+  </div>
+</body>
+</html>
